@@ -1,0 +1,183 @@
+E|0|EQ|Equaliser|0
+P|High-pass|On|1|0|1|0||
+P|High-pass|Freq|0|20|1000|30|Hz|
+P|High-pass|Slope|2|0|3|0||12 dB,24 dB,36 dB,48 dB
+P|Low-pass|On|1|0|1|0||
+P|Low-pass|Freq|0|1000|20000|16000|Hz|
+P|Low-pass|Slope|2|0|3|0||12 dB,24 dB,36 dB,48 dB
+P|Band 1|On|1|0|1|1||
+P|Band 1|Freq|0|20|20000|80|Hz|
+P|Band 1|Gain|0|-18|18|0|dB|
+P|Band 1|Q|0|0.1|10|1||
+P|Band 1|Shape|2|0|2|1||Bell,Low Shelf,High Shelf
+P|Band 2|On|1|0|1|1||
+P|Band 2|Freq|0|20|20000|250|Hz|
+P|Band 2|Gain|0|-18|18|0|dB|
+P|Band 2|Q|0|0.1|10|1||
+P|Band 2|Shape|2|0|2|0||Bell,Low Shelf,High Shelf
+P|Band 3|On|1|0|1|1||
+P|Band 3|Freq|0|20|20000|800|Hz|
+P|Band 3|Gain|0|-18|18|0|dB|
+P|Band 3|Q|0|0.1|10|1||
+P|Band 3|Shape|2|0|2|0||Bell,Low Shelf,High Shelf
+P|Band 4|On|1|0|1|1||
+P|Band 4|Freq|0|20|20000|2500|Hz|
+P|Band 4|Gain|0|-18|18|0|dB|
+P|Band 4|Q|0|0.1|10|1||
+P|Band 4|Shape|2|0|2|0||Bell,Low Shelf,High Shelf
+P|Band 5|On|1|0|1|1||
+P|Band 5|Freq|0|20|20000|6000|Hz|
+P|Band 5|Gain|0|-18|18|0|dB|
+P|Band 5|Q|0|0.1|10|1||
+P|Band 5|Shape|2|0|2|0||Bell,Low Shelf,High Shelf
+P|Band 6|On|1|0|1|1||
+P|Band 6|Freq|0|20|20000|12000|Hz|
+P|Band 6|Gain|0|-18|18|0|dB|
+P|Band 6|Q|0|0.1|10|1||
+P|Band 6|Shape|2|0|2|2||Bell,Low Shelf,High Shelf
+P|Output|Out Gain|0|-12|12|0|dB|
+E|1|Gate|Dynamics|1
+P||Threshold|0|-80|0|-40|dB|
+P||Range|0|-80|0|-80|dB|
+P||Hyst|0|0|12|4|dB|
+P||Attack|0|0.05|50|1|ms|
+P||Hold|0|0|500|50|ms|
+P||Release|0|5|2000|150|ms|
+P||Lookahead|0|0|10|1|ms|
+P||Key HP|0|20|2000|20|Hz|
+P||Key LP|0|1000|20000|20000|Hz|
+P||Key Listen|1|0|1|0||
+E|2|Expander|Dynamics|1
+P||Threshold|0|-80|0|-45|dB|
+P||Ratio|0|1|20|3|:1|
+P||Range|0|0|80|40|dB|
+P||Knee|0|0|24|6|dB|
+P||Attack|0|0.05|100|1|ms|
+P||Hold|0|0|500|30|ms|
+P||Release|0|5|2000|150|ms|
+P||Lookahead|0|0|10|1|ms|
+P||Detector|2|0|1|1||Peak,RMS
+P||Link|0|0|100|100|%|
+P||Mix|0|0|100|100|%|
+P||Key HP|0|20|2000|20|Hz|
+P||Key LP|0|1000|20000|20000|Hz|
+P||Key Listen|1|0|1|0||
+E|3|Compressor|Dynamics|1
+P||Threshold|0|-60|0|-18|dB|
+P||Ratio|0|1|20|4|:1|
+P||Knee|0|0|24|6|dB|
+P||Attack|0|0.1|200|10|ms|
+P||Release|0|5|2000|120|ms|
+P||Makeup|0|0|24|0|dB|
+P||Mix|0|0|100|100|%|
+P||Key HP|0|20|2000|20|Hz|
+P||Key Listen|1|0|1|0||
+E|4|De-esser|Dynamics|1
+P||Frequency|0|2000|12000|6500|Hz|
+P||Q|0|0.5|4|1.5||
+P||Threshold|0|-60|0|-30|dB|
+P||Range|0|0|24|12|dB|
+P||Attack|0|0.05|10|0.5|ms|
+P||Release|0|5|200|40|ms|
+P||Mode|2|0|1|0||Split,Wide
+P||Listen|1|0|1|0||
+E|5|Limiter|Dynamics|0
+P||Gain|0|0|24|0|dB|
+P||Ceiling|0|-12|0|-0.3|dB|
+P||Release|0|10|1000|100|ms|
+P||Lookahead|0|0|5|2|ms|
+E|6|Ducking|Dynamics|1
+P||Threshold|0|-60|0|-24|dB|
+P||Range|0|-60|0|-12|dB|
+P||Attack|0|0.1|500|50|ms|
+P||Release|0|10|3000|1200|ms|
+E|7|Chorus|Modulation|0
+P||Rate|0|0.05|10|0.6|Hz|
+P||Depth|0|0|100|50|%|
+P||Voices|0|1|4|3||
+P||Delay|0|3|40|14|ms|
+P||Feedback|0|0|60|0|%|
+P||Spread|0|0|100|100|%|
+P||Hi Cut|0|1000|20000|14000|Hz|
+P||Mix|0|0|100|50|%|
+E|8|Delay|Time and space|0
+P||Mode|2|0|2|0||Ping-Pong,Stereo,Mono
+P||Sync|2|0|1|0||Free,Tempo
+P||Time|0|1|2000|375|ms|
+P||Note|2|0|15|4||4/1,2/1,1/1,1/2,1/4,1/8,1/16,1/32,1/2T,1/4T,1/8T,1/16T,1/2D,1/4D,1/8D,1/16D
+P||R Ratio|0|25|200|100|%|
+P||Feedback|0|0|95|35|%|
+P||Lo Cut|0|20|1000|80|Hz|
+P||Hi Cut|0|1000|20000|7000|Hz|
+P||Mix|0|0|100|30|%|
+E|9|Reverb|Time and space|0
+P||Type|2|0|2|0||Room,Hall,Plate
+P||Pre-Delay|0|0|200|20|ms|
+P||Size|0|0|100|50|%|
+P||Decay|0|0.1|20|2.2|s|
+P||Damping|0|0|100|40|%|
+P||Diffusion|0|0|100|70|%|
+P||Modulation|0|0|100|30|%|
+P||Width|0|0|100|100|%|
+P||Lo Cut|0|20|1000|100|Hz|
+P||Hi Cut|0|1000|20000|12000|Hz|
+P||Mix|0|0|100|25|%|
+E|10|Saturator|Colour|0
+P||Mode|2|0|2|0||Tape,Tube,Transformer
+P||Drive|0|0|24|8|dB|
+P||Soften|0|0|100|35|%|
+P||Auto Gain|1|0|1|1||
+P||Output|0|-12|12|0|dB|
+P||Mix|0|0|100|100|%|
+E|11|Tremolo|Modulation|0
+P||Sync|2|0|1|1||Free,Tempo
+P||Rate|0|0.05|30|5|Hz|
+P||Note|2|0|15|5||4/1,2/1,1/1,1/2,1/4,1/8,1/16,1/32,1/2T,1/4T,1/8T,1/16T,1/2D,1/4D,1/8D,1/16D
+P||Shape|2|0|5|0||Sine,Triangle,Square,Saw Up,Saw Down,Random
+P||Depth|0|0|100|60|%|
+P||Stereo|0|0|180|0|deg|
+P||Phase|0|0|360|0|deg|
+P||Smooth|0|0|100|2|ms|
+E|12|Auto Pan|Modulation|0
+P||Sync|2|0|1|1||Free,Tempo
+P||Rate|0|0.05|20|1|Hz|
+P||Note|2|0|15|4||4/1,2/1,1/1,1/2,1/4,1/8,1/16,1/32,1/2T,1/4T,1/8T,1/16T,1/2D,1/4D,1/8D,1/16D
+P||Shape|2|0|5|0||Sine,Triangle,Square,Saw Up,Saw Down,Random
+P||Depth|0|0|100|100|%|
+P||Phase|0|0|360|0|deg|
+P||Smooth|0|0|100|8|ms|
+P||Centre|0|-100|100|0|%|
+E|13|Utility|Utility|0
+P||Gain|0|-60|24|0|dB|
+P||Pan|0|-100|100|0|%|
+P||Width|0|0|200|100|%|
+P||Polarity L|1|0|1|0||
+P||Polarity R|1|0|1|0||
+P||Swap L/R|1|0|1|0||
+P||Mono|1|0|1|0||
+P||Mute L|1|0|1|0||
+P||Mute R|1|0|1|0||
+P||DC Filter|1|0|1|0||
+P||Mode|2|0|4|0||Stereo,Mid solo,Side solo,Left only,Right only
+E|14|Transposer|Pitch|0
+P||Transpose|0|-12|12|0|st|
+P||Fine|0|-50|50|0|cent|
+P||Window|0|20|100|50|ms|
+P||Mix|0|0|100|100|%|
+E|15|Hum Remover|Cleanup|0
+P||Mains|2|0|2|2||50 Hz,60 Hz,Auto
+P||Harmonics|0|1|8|3||
+P||Q|0|5|100|30||
+P||Depth|0|0|100|100|%|
+E|16|Bitcrusher|Colour|0
+P||Bits|0|1|16|8||
+P||Downsample|0|1|32|1|x|
+P||Dither|0|0|100|0|%|
+P||Mix|0|0|100|100|%|
+E|17|Test Tone|Utility|0
+P||Wave|2|0|6|0||Sine,Square,Triangle,Saw,White,Pink,Sweep
+P||Freq|0|20|20000|1000|Hz|
+P||Level|0|-60|0|-30|dB|
+P||Channels|2|0|2|0||Stereo,Left,Right
+P||Mode|2|0|1|0||Replace,Add
+P||Sweep|0|2|60|10|s|
